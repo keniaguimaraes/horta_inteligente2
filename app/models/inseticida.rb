@@ -1,4 +1,5 @@
 class Inseticida < ApplicationRecord
-  set_table_name 'inseticida'
-  set_primary_key 'id'
+    
+  self.table_name = "inseticida"
+  self.primary_key = "id"
 end
