@@ -1,0 +1,2 @@
+class SementeCiclo < ApplicationRecord
+end

@@ -1,0 +1,2 @@
+class PragaInseticida < ApplicationRecord
+end

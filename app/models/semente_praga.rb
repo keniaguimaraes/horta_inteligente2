@@ -1,0 +1,2 @@
+class SementePraga < ApplicationRecord
+end

@@ -1,0 +1,27 @@
+
+development:
+  adapter: mysql2
+  database: horta11
+  host: <%= ENV['DB_HOSTNAME'] %>
+  username: horta11
+  password: <%= ENV['DB_PASSWORD'] %>
+  encoding: utf8mb4
+  collation: utf8mb4_unicode_ci
+  
+test:
+  adapter: mysql2
+  database: horta11
+  host: <%= ENV['DB_HOSTNAME'] %>
+  username: horta11
+  password: <%= ENV['DB_PASSWORD'] %>
+  encoding: utf8mb4
+  collation: utf8mb4_unicode_ci
+  
+production:
+  adapter: mysql2
+  database: horta11
+  host: <%= ENV['DB_HOSTNAME'] %>
+  username: horta11
+  password: <%= ENV['DB_PASSWORD'] %>
+  encoding: utf8mb4
+  collation: utf8mb4_unicode_ci
