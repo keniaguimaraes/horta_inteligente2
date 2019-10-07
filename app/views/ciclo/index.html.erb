@@ -1,0 +1,24 @@
+<br>
+ <h3>Informações Sobre o Ciclo do Plantio <%=params[:plantio_id]%></div></h3>
+<div class="container">
+
+  <div class="row">
+    <div class="col-1 bg-success text-white">Tipo</div>
+	<div class="col-3 bg-success text-white">Semente</div>
+	<div class="col-2 bg-success text-white">Inicio Ciclo</div>
+	<div class="col-2 bg-success text-white">Fase desenvolvimento</div>
+	<div class="col-2 bg-success text-white">Previsão de Colheita</div>
+    <div class="w-100"></div>
+        <br>
+    <% @ciclo.each do |ciclo|  %>
+		<div class="col-1"><%=ciclo.tipo_semente%></div>
+		<div class="col-3"><%=ciclo.nome_conhecido%></div>
+		<div class="col-2"><%=formato_data_hora(ciclo.inicio_muda)%></div>
+		<div class="col-2"><%=formato_data_hora(ciclo.inicio_desenvolvimento)%></div>
+		<div class="col-2"><%=formato_data_hora(ciclo.inicio_colheita)%></div>
+    <%end%>
+  </div>
+
+</div>              
+          
+

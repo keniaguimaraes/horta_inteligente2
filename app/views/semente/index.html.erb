@@ -12,6 +12,7 @@
 	<div class="col-1 bg-success text-white">Longitude</div>
 	<div class="col-3 bg-success text-white"></div>
     <div class="w-100"></div>
+       <br>
     <% @semente.each do |semente|  %>
 		<div class="col-1"><%=semente.id%></div>
 		<div class="col-1"><%=semente.tipo_semente%></div>
@@ -19,12 +20,15 @@
 		<div class="col-2"><%=semente.nome_cientifico.strip%></div>
 		<div class="col-1"><%=semente.latitude%></div>
 		<div class="col-1"><%=semente.longitude%></div>
-		<div class="col-3"> <%= link_to 'Ciclo', semente_plantio_path(:plantio_id=>semente.id),  class: 'btn btn-info'%>
-		<%= link_to 'Irrigação', semente_plantio_path(:plantio_id=>semente.id),  class: 'btn btn-info'%>
-		<%= link_to 'Praga', semente_plantio_path(:plantio_id=>semente.id),  class: 'btn btn-info'%> </div>
+		<div class="col-3"> <%= link_to 'Ciclo', semente_ciclo_path(:semente_id=>semente.id,:plantio_id=>semente.plantio_id),  class: 'btn btn-info'%>
+		<%= link_to 'Irrigação', semente_irrigacao_path(:semente_id=>semente.id,:plantio_id=>semente.plantio_id),  class: 'btn btn-info'%>
+		<%= link_to 'Praga', semente_praga_path(:semente_id=>semente.id,:plantio_id=>semente.plantio_id),  class: 'btn btn-info'%> </div>
         <div class="w-100"></div>
     <%end%>
   </div>
+  <div class="row">
+     <div class=col-8> <h5> <%= paginate @semente %></h5></div>
+ </div>
 </div>              
           
 

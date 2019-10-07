@@ -1,0 +1,42 @@
+<br>
+ <h3>Informações Sobre Praga do Plantio <%=params[:plantio_id]%></div></h3>
+<div class="container">
+
+  <div class="row">
+    <div class="col-1 bg-success text-white">Tipo</div>
+	<div class="col-3 bg-success text-white">Semente</div>
+	<div class="col-2 bg-success text-white">Praga</div>
+	<div class="col-2 bg-success text-white">Inicio</div>
+	<div class="col-2 bg-success text-white">Fim</div>
+	<div class="col-2 bg-success text-white">Solução</div>
+    <div class="w-100"></div>
+    <br>
+    <% @praga.each do |praga|  %>
+		<div class="col-1"><%=praga.tipo_semente%></div>
+		<div class="col-3"><%=praga.nome_conhecido%></div>
+		<div class="col-2"><%=praga.nome%></div>
+		<div class="col-2"><%=formato_data_hora(praga.data_inicio)%></div>
+		<div class="col-2"><%=formato_data_hora(praga.data_fim)%></div>
+		 <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Praga</a>
+		<p>
+		    <div class="row">
+  <div class="col">
+    <div class="collapse multi-collapse" id="multiCollapseExample1">
+      <div class="card card-body">
+        Anim pariatur cliche reprehenderit, enim alemanha 7x1 brasil life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+      </div>
+    </div>
+  </div>
+</div>
+  
+ 
+</p>
+
+		<div class="w-100"></div>
+    <%end%>
+  </div>
+
+</div>    
+<script>
+$('.collapse').collapse()
+</script>

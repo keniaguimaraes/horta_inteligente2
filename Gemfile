@@ -28,7 +28,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'mysql2'
 gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
-
+gem 'kaminari'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

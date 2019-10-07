@@ -1,0 +1,18 @@
+<br>
+ <h3>Informações Sobre Irrigação do Plantio <%=params[:plantio_id]%></div></h3>
+<div class="container">
+  <div class="row">
+    <div class="col-1 bg-success text-white">Tipo</div>
+	<div class="col-3 bg-success text-white">Semente</div>
+	<div class="col-2 bg-success text-white">Data Irrigação</div>
+    <div class="w-100"></div>
+    <br>
+    <% @irrigacao.each do |irrigacao|  %>
+		<div class="col-1"><%=irrigacao.tipo_semente%></div>
+		<div class="col-3"><%=irrigacao.nome_conhecido%></div>
+		<div class="col-2"><%=formato_data_hora(irrigacao.data_irrigacao)%></div>
+		 <div class="w-100"></div>
+    <%end%>
+  </div>
+
+</div>    
