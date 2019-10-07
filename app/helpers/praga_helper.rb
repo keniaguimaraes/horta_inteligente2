@@ -1,0 +1,2 @@
+module PragaHelper
+end

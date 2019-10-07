@@ -1,0 +1,20 @@
+<br>
+<% @plantio.each do |plantio| %> 
+<div class="card">
+  <div class="card-header"> <b>Plantio <%=plantio.id%></b> </div>
+    <div class="card-body">
+      <% 
+         @detalhes = PlantioDetalhesView.where("id =:plantio_id",{plantio_id:plantio.id}).all
+         @detalhes.each do |detalhe|
+       %>          
+      <p class="card-text"><b>Semente</b>: <%=detalhe.nome_conhecido%>   <b>Total:</b><%=detalhe.qtd_semente%>  </p>
+      <%end%>
+    </div>
+
+      <%= link_to 'Detalhes', semente_plantio_path(:plantio_id=>plantio.id),  class: 'btn btn-success'%>                         
+    <div>
+ </div>
+ <br>
+<%end%>
+                        
+          

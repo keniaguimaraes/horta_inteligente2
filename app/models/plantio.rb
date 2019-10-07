@@ -1,5 +1,5 @@
 class Plantio< ApplicationRecord
     
-  set_table_name 'plantio'
-  set_primary_key 'id'
+  self.table_name = "plantio"
+  self.primary_key = "id"
 end

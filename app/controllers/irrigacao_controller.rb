@@ -1,0 +1,2 @@
+class IrrigacaoController < ApplicationController
+end

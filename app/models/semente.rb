@@ -1,4 +1,5 @@
 class Semente< ApplicationRecord
-     set_table_name 'semente'
-  set_primary_key 'id'
+    
+  self.table_name = "semente"
+  self.primary_key = "id"
 end

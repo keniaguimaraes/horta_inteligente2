@@ -1,0 +1,2 @@
+class CicloController < ApplicationController
+end
