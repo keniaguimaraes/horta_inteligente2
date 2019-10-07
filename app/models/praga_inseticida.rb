@@ -1,2 +1,0 @@
-class PragaInseticida < ApplicationRecord
-end
