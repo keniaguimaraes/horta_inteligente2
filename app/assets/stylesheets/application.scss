@@ -13,4 +13,13 @@
  *= require_tree .
  *= require_self
  */
- @import 'bootstrap';
+
+$enable-flex: true;
+$enable-rounded: true;
+$enable-shadows: true;
+$enable-gradients: true;
+$enable-transitions: true;
+
+@import 'bootstrap';
+ 
+.beta { color: color("teal"); }
