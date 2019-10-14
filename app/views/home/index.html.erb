@@ -2,7 +2,7 @@
 <% @plantio.each do |plantio| %> 
 <div class="card border-success mx-auto" style="max-width: 50rem;">
   <div class="card-header"> <b>Plantio <%=plantio.id%></b>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  <b>Responsável: </b> <%=plantio.usuario%> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<b>Data Plantio: </b><%=formato_data_hora(plantio.data_plantio)%> 
-  <br> <b>Geolocalização:</b> &nbsp &nbsp &nbsp &nbsp <b>Latitude:<%=plantio.latitude%></b>  &nbsp &nbsp &nbsp &nbsp p <b>Longitude:</b><%=plantio.latitude%> </div>
+ </div>
     <div class="card-body">
       <% 
          @detalhes = PlantioDetalhesView.where("id =:plantio_id",{plantio_id:plantio.id}).all

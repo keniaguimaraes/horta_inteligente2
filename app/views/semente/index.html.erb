@@ -1,6 +1,17 @@
 
 <br>
  <h3>Informações Sobre Plantio <%=params[:plantio_id]%></div></h3>
+   <% @semente_cabecalho.each do | semente_cabecalho|  %>
+   <div class="container">
+  	 <div class="row">
+  	 	<div class="col-4"><b>Tipo de Solo:</b> <%=semente_cabecalho.tipo_solo%>  </div>
+  	 	<div class="col-4"><b>Latitude:</b>     <%=semente_cabecalho.latitude%>  	</div>
+  	 	<div class="col-4"><b>Longitude:</b>    <%=semente_cabecalho.longitude%> 	</div>
+  	 </div>
+    <%end%>	 
+   
+  </div>
+<br>
 <div class="container">
 
   <div class="row">
@@ -8,8 +19,8 @@
 	<div class="col-1 bg-success text-white">Tipo</div>
 	<div class="col-3 bg-success text-white">Semente</div>
 	<div class="col-2 bg-success text-white">Nome Científico</div>
-	<div class="col-1 bg-success text-white">Latitude</div>
-	<div class="col-1 bg-success text-white">Longitude</div>
+	<div class="col-1 bg-success text-white">Lote</div>
+	<!--<div class="col-1 bg-success text-white">Longitude</div>-->
 	<div class="col-3 bg-success text-white"></div>
     <div class="w-100"></div>
        <br>
@@ -18,11 +29,10 @@
 		<div class="col-1"><%=semente.tipo_semente%></div>
 		<div class="col-3"><%=semente.nome_conhecido.strip%></div>
 		<div class="col-2"><%=semente.nome_cientifico.strip%></div>
-		<div class="col-1"><%=semente.latitude%></div>
-		<div class="col-1"><%=semente.longitude%></div>
-		<div class="col-3"> <%= link_to 'Ciclo', semente_ciclo_path(:semente_id=>semente.id,:plantio_id=>semente.plantio_id),  class: 'btn btn-info'%>
-		<%= link_to 'Irrigação', semente_irrigacao_path(:semente_id=>semente.id,:plantio_id=>semente.plantio_id),  class: 'btn btn-info'%>
-		<%= link_to 'Praga', semente_praga_path(:semente_id=>semente.id,:plantio_id=>semente.plantio_id),  class: 'btn btn-info'%> </div>
+		<div class="col-1"><%=semente.lote%></div>
+		<div class="col-3"> <%= link_to 'Ciclo', semente_ciclo_path(:semente_id=>semente.id,:plantio_id=>semente.plantio_id),  class: 'btn btn-info text-white'%>
+		<%= link_to 'Irrigação', semente_irrigacao_path(:semente_id=>semente.id,:plantio_id=>semente.plantio_id),  class: 'btn btn-info text-white'%>
+		<%= link_to 'Praga', semente_praga_path(:semente_id=>semente.id,:plantio_id=>semente.plantio_id),  class: 'btn btn-info text-white'%> </div>
         <div class="w-100"></div>
     <%end%>
   </div>
