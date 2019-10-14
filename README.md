@@ -1,24 +1,13 @@
-# README
+# Horta Inteligente
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+ A proposta da aplicação é a demosntração das funcionalidades do banco de dados elaborado na disciplina de Laborátorio de Banco de Dados.
+ 
+### Colaboradores
+ - Kênia Guimarães 
+ - Danilo Brito
+ 
+### Tecnologias 
+    $ Ruby 2.4.0
+    $ Rails 5.2.2
+    $ MySQL 8.0
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
